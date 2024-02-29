@@ -13,7 +13,7 @@ import pandas as pd
 #     return data
 
 def read_data(path):
-    return pd.read_csv(path)
+    return pd.read_excel(path)
 
 
 def create_dataset(opt):

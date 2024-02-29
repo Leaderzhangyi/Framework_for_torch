@@ -6,10 +6,10 @@ from .transformer import TransformerModel
 from .tcn_model import LSTM_NET
 import torch
 def create_model(opt):
-     model = LSTM(input_size=opt.input_size,hidden_size=opt.hidden_size,num_layers=opt.num_layer,
-          output_size=opt.output_size,batch_size=opt.batch_size)
+     # model = LSTM(input_size=opt.input_size,hidden_size=opt.hidden_size,num_layers=opt.num_layer,
+     #       output_size=opt.output_size,batch_size=opt.batch_size)
      
-     # model = TransformerModel(input_dim=70,output_dim=1,embed_dim=32,num_layers=3,num_heads=4,feedforward_dim=128,dropout=0.3)
+     model = TransformerModel(input_dim=opt.input_size,output_dim=1,embed_dim=32,num_layers=3,num_heads=4,feedforward_dim=128,dropout=0.3)
 
      # model_params = {
      # 'data_input_col': 6,
